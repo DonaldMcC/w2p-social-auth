@@ -40,11 +40,13 @@ plugins.social_auth.SOCIAL_AUTH_TWITTER_KEY = myconf.take('psa.twitter_consumer_
 plugins.social_auth.SOCIAL_AUTH_TWITTER_SECRET = myconf.take('psa.twitter_secret_key')
 plugins.social_auth.SOCIAL_AUTH_FACEBOOK_KEY = myconf.take('psa.facebook_app_id')
 plugins.social_auth.SOCIAL_AUTH_FACEBOOK_SECRET = myconf.take('psa.facebook_app_secret')
-plugins.social_auth.SOCIAL_AUTH_GOOGLE_PLUS_KEY = myconf.take('psa.google_client_id')
-plugins.social_auth.SOCIAL_AUTH_GOOGLE_PLUS_SECRET = myconf.take('psa.google_client_secret')
+plugins.social_auth.SOCIAL_AUTH_GOOGLE_KEY = myconf.take('psa.google_client_id')
+plugins.social_auth.SOCIAL_AUTH_GOOGLE_SECRET = myconf.take('psa.google_client_secret')
 plugins.social_auth.SOCIAL_AUTH_LIVE_KEY = myconf.take('psa.live_key')
 plugins.social_auth.SOCIAL_AUTH_LIVE_SECRET = myconf.take('psa.live_secret')
-plugins.social_auth.SOCIAL_AUTH_LIVE_LOGIN_REDIRECT_URL = 'http://127.0.0.1:8080/w2pruned/logged-in/'
+plugins.social_auth.SOCIAL_AUTH_AMAZON_KEY = myconf.take('psa.amazon_key')
+plugins.social_auth.SOCIAL_AUTH_AMAZON_SECRET = myconf.take('psa.amazon_secret')
+plugins.social_auth.SOCIAL_AUTH_LIVE_LOGIN_REDIRECT_URL = 'http://127.0.0.1:8080/w2platest/logged-in/'
 
 
 # Configure PSA with all required backends
@@ -65,7 +67,9 @@ plugins.social_auth.SOCIAL_AUTH_AUTHENTICATION_BACKENDS = (
     # It must _not_ be configured in SOCIAL_AUTH_PROVIDERS (below)
     'social.backends.twitter.TwitterOAuth',
     'social.backends.facebook.FacebookOAuth2',
-    'social.backends.persona.PersonaAuth')
+    'social.backends.persona.PersonaAuth',
+    'social.backends.live.LiveOAuth2',
+    'social.backends.google.GoogleOAuth2')
 # Configure the providers that you want to show in the login form.
 # <backend name> : <display name>
 # (You can find the backend name in the backend files as configured above.)
@@ -80,7 +84,9 @@ plugins.social_auth.SOCIAL_AUTH_AUTHENTICATION_BACKENDS = (
 plugins.social_auth.SOCIAL_AUTH_PROVIDERS = {
     'twitter': 'Twitter',
     'facebook': 'Facebook',
-    'persona': 'Mozilla Persona'}
+    'persona': 'Mozilla Persona',
+    'live': 'Live',
+    'google': 'Google'}
 # Configure app index URL. This is where you are redirected after logon when
 # auth.settings.logout_next is not configured.
 # If both are not configured there may be no redirection after logout! (returns 'None')
@@ -101,4 +107,3 @@ plugins.social_auth.SOCIAL_AUTH_ENABLE_PERSONA = True
 
 # Uncomment this line to remove icons from buttons
 # plugins.social_auth.SOCIAL_AUTH_UI_ICONS = False
-

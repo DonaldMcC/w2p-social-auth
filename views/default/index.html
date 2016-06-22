@@ -17,6 +17,10 @@
            _href=URL('admin','default','peek',args=(request.application,'views',request.controller,'index.html')))))}}</li>
   <li>{{=T('You can modify this application and adapt it to your needs')}}</li>
 </ol>
+
+<p>This is a plug-in for testing python social auth integration with web2py.
+The code for this version is hosted at https://github.com/DonaldMcC/w2p-social-auth which was forked from https://github.com/bnmnetp/w2p-social-auth which worked with version 0.1.26 and lower
+of python social auth.</p>
 {{elif 'content' in globals():}}
 {{=content}}
 {{else:}}
