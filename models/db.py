@@ -65,11 +65,11 @@ plugins.social_auth.SOCIAL_AUTH_LIVE_LOGIN_REDIRECT_URL = 'http://127.0.0.1:8080
 plugins.social_auth.SOCIAL_AUTH_AUTHENTICATION_BACKENDS = (
     # You need this one to enable manual input for openid.
     # It must _not_ be configured in SOCIAL_AUTH_PROVIDERS (below)
-    'social.backends.twitter.TwitterOAuth',
-    'social.backends.facebook.FacebookOAuth2',
-    'social.backends.persona.PersonaAuth',
-    'social.backends.live.LiveOAuth2',
-    'social.backends.google.GoogleOAuth2')
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.persona.PersonaAuth',
+    'social_core.backends.live.LiveOAuth2',
+    'social_core.backends.google.GoogleOAuth2')
 # Configure the providers that you want to show in the login form.
 # <backend name> : <display name>
 # (You can find the backend name in the backend files as configured above.)

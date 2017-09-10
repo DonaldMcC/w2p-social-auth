@@ -1,9 +1,9 @@
 import logging
-from social.strategies.utils import get_strategy
-from social.utils import setting_name
-from social.backends.utils import load_backends, get_backend
-from social.exceptions import SocialAuthBaseException
-from social.actions import do_disconnect, do_auth
+from social_core.utils import get_strategy
+from social_core.utils import setting_name
+from social_core.backends.utils import load_backends, get_backend
+from social_core.exceptions import SocialAuthBaseException
+from social_core.actions import do_disconnect, do_auth
 from plugin_social_auth.models import UserSocialAuth
 from models import User
 from functools import wraps

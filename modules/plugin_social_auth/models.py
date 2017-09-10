@@ -1,4 +1,4 @@
-from social.storage.base import UserMixin, BaseStorage, NonceMixin, AssociationMixin
+from social_core.storage import UserMixin, BaseStorage, NonceMixin, AssociationMixin
 from gluon.globals import current
 import base64
 import six
