@@ -6,7 +6,7 @@ from utils import verifiable_redirect
 def partial(func):
     @wraps(func)
     def wrapper(strategy, pipeline_index, *args, **kwargs):
-        values = current.strategy.partial_to_session(pipeline_index, *args, **kwargs)
+        values = current.strategy.partial_save(pipeline_index, *args, **kwargs)
         strategy.session_set('partial_pipeline', values)
         return func(strategy, pipeline_index, *args, **kwargs)
     return wrapper
