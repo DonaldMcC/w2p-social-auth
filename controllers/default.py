@@ -46,11 +46,12 @@ def require():
     return dict(bla=bla)    
     
 
-@auth.requires_login()
-def fullreset():
-    for table_name in db.tables():
-        db[table_name].drop()
+def clearusers():
+    users = db(db.auth_user.id > 0).select()
 
-    return dict(message='Everything cleared out')
+    for user in users:
+        user.delete()
+
+    return dict(message='All users cleared out')
 
 
