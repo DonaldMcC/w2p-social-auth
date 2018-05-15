@@ -8,11 +8,16 @@
 <h1>Web2py Python Social Auth Plug-in</h1>
 <p>This is a plug-in for testing python social auth integration with web2py.
 The code for this version is hosted at https://github.com/DonaldMcC/w2p-social-auth which was forked from https://github.com/bnmnetp/w2p-social-auth which worked with version 0.1.26 and lower
-of python social auth.  A sample of providers are configured and if you do want to test then you do need to login using one of these.
+    of python social auth.  A sample of providers are configured and if you do want to test then you do need to login using one of these.</p>
 
-These log-ins are now being deleted on a weekly basis and are not being analysed or used in any manner.  If this is not
+<p>These log-ins are now being deleted on a weekly basis and are not being analysed or used in any manner.  If this is not
     acceptable then do not log into the site.
 </p>
+<p>Known Issues:  Facebook login is no longer correctly configured - this is due to changes in the Facebook API and will
+    need some additional tweaking which we don't have time to work on right now.
+</p>
+
+
 {{elif 'content' in globals():}}
 {{=content}}
 {{else:}}
