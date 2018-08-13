@@ -39,6 +39,7 @@ for prop in ['first_name', 'last_name', 'username', 'email']:
 
 plugins.social_auth.SOCIAL_AUTH_TWITTER_KEY = myconf.take('psa.twitter_consumer_key')
 plugins.social_auth.SOCIAL_AUTH_TWITTER_SECRET = myconf.take('psa.twitter_secret_key')
+plugins.social_auth.SOCIAL_AUTH_TWITTER_LOGIN_REDIRECT_URL = 'https://www.netdecisionmaking.com/w2ppsatest/plugin_social_auth/complete/'
 plugins.social_auth.SOCIAL_AUTH_FACEBOOK_KEY = myconf.take('psa.facebook_app_id')
 plugins.social_auth.SOCIAL_AUTH_FACEBOOK_SECRET = myconf.take('psa.facebook_app_secret')
 plugins.social_auth.SOCIAL_AUTH_GOOGLE_PLUS_KEY = myconf.take('psa.google_client_id')
