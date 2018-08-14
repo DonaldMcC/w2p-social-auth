@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from social_core.storage import UserMixin, BaseStorage, NonceMixin, AssociationMixin
 from gluon.globals import current
 import base64

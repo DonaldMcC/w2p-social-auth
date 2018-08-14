@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from social_core.strategy import BaseTemplateStrategy, BaseStrategy
 from gluon.globals import current
 from gluon.http import redirect

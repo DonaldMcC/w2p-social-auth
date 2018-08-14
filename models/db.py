@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 from gluon.tools import PluginManager
-from plugin_social_auth.utils import SocialAuth
+
 
 # Remove this in production
 from gluon.custom_import import track_changes; track_changes(True)
 from gluon.contrib.appconfig import AppConfig
+from plugin_social_auth.utils import SocialAuth
+
 myconf = AppConfig(reload=True)
 
 # This needs to be replaced by your own db connection

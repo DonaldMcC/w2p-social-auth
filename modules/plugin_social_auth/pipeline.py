@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from social_core.pipeline.social_auth import associate_user as assoc_user
 from social_core.pipeline.utils import partial_prepare
 from functools import wraps

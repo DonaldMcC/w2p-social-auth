@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import logging
 from social_core.utils import get_strategy
 from social_core.utils import setting_name

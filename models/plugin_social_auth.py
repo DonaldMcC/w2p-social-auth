@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from gluon.globals import current
 from gluon.storage import Storage
 
