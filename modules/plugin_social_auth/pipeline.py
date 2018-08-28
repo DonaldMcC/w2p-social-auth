@@ -3,7 +3,7 @@ from social_core.pipeline.social_auth import associate_user as assoc_user
 from social_core.pipeline.utils import partial_prepare
 from functools import wraps
 from gluon.globals import current
-from utils import verifiable_redirect
+from plugin_social_auth.utils import verifiable_redirect
 
 
 #def partial(func):

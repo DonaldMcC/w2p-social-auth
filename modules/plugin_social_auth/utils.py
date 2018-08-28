@@ -6,7 +6,7 @@ from social_core.backends.utils import load_backends, get_backend
 from social_core.exceptions import SocialAuthBaseException
 from social_core.actions import do_disconnect, do_auth
 from plugin_social_auth.models import UserSocialAuth
-from models import User
+from plugin_social_auth.models import User
 from functools import wraps
 from gluon.html import *
 from gluon.http import HTTP, redirect
@@ -14,7 +14,11 @@ from gluon.globals import current
 from gluon.tools import Auth
 from gluon.validators import IS_URL
 from gluon.utils import web2py_uuid
-from urlparse import urlparse
+
+# from urlparse import urlparse redo for PY2
+
+from urllib.parse import urljoin as urlparse
+
 
 
 def verify(f):
@@ -203,7 +207,7 @@ class SocialAuth(Auth):
                     INPUT(_type='hidden', _id='assertion', _name='assertion'), # Used for Mozilla Persona
                     INPUT(_type='hidden', _id='backend', _name='backend'),
                     DIV(P(H5('Log in using any of the following services:')),
-                        *[self.__button((k, v)) for k, v in providers.iteritems() if k in backends],
+                        *[self.__button((k, v)) for k, v in providers.items() if k in backends],
                         _id='w2psa-buttons'),
                     _id="social_button_form")
 
