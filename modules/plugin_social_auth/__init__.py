@@ -1,4 +1,4 @@
-import sys
+import sys, os
 
 #FIXME: Hack to social.utils.import_module() work
 from plugin_social_auth import w2p_strategy, models, utils, pipeline

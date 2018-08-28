@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import sys
 import logging
 from social_core.utils import get_strategy
 from social_core.utils import setting_name
@@ -6,7 +7,7 @@ from social_core.backends.utils import load_backends, get_backend
 from social_core.exceptions import SocialAuthBaseException
 from social_core.actions import do_disconnect, do_auth
 from plugin_social_auth.models import UserSocialAuth
-from plugin_social_auth.models import User
+from plugin_social_auth.models import User # PY3 required
 from functools import wraps
 from gluon.html import *
 from gluon.http import HTTP, redirect
@@ -16,8 +17,10 @@ from gluon.validators import IS_URL
 from gluon.utils import web2py_uuid
 
 # from urlparse import urlparse redo for PY2
-
-from urllib.parse import urljoin as urlparse
+if sys.version_info > (3, 0):
+    from urllib.parse import urljoin as urlparse
+else:
+    from urlparse import urlparse
 
 
 
